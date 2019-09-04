@@ -183,7 +183,7 @@ _GLIBCXX_BEGIN_NAMESPACE_VERSION
   size_t
   _Hash_bytes(const void* ptr, size_t len, size_t seed)
   {
-    static_assert(is_same_v<uint16_t, size_t>);
+    static_assert(is_same<uint16_t, size_t>::value);
     size_t hash = seed;
     const char* cptr = reinterpret_cast<const char*>(ptr);
     for (; len; --len)

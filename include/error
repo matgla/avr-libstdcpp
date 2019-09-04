@@ -1,0 +1,21 @@
+#ifndef _GLIBCXX_ERROR
+#define _GLIBCXX_ERROR 1
+
+#pragma GCC system_header
+#include <bits/c++config.h>
+
+
+namespace std _GLIBCXX_VISIBILITY(default)
+{
+_GLIBCXX_BEGIN_NAMESPACE_VERSION
+void terminate()
+{
+    while (true)
+    {
+
+    }
+}
+_GLIBCXX_END_NAMESPACE_VERSION
+}
+
+#endif /* _GLIBCXX_ERROR */

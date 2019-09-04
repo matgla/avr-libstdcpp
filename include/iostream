@@ -1,0 +1,27 @@
+#ifndef _GLIBCXX_IOSTREAM
+#define _GLIBCXX_IOSTREAM 1
+
+#pragma GCC system_header
+#include <bits/c++config.h>
+#include <error>
+
+
+namespace std _GLIBCXX_VISIBILITY(default)
+{
+_GLIBCXX_BEGIN_NAMESPACE_VERSION
+
+int endl = 0;
+
+class StreamStub
+{
+public:
+    template <typename T>
+    StreamStub operator<<(const T&) { return {};}
+};
+
+StreamStub cerr;
+
+_GLIBCXX_END_NAMESPACE_VERSION
+}
+
+#endif /* _GLIBCXX_IOSTREAM*/
